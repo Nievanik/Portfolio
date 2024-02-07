@@ -1,0 +1,70 @@
+.nav-list ul {
+    visibility: hidden; 
+    position: absolute;
+    text-align: center;
+    padding-bottom: 10rem;
+    top: 5.25rem;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(0, 0, 15);
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.nav-list ul li{
+    margin: 1rem 0;
+
+}
+
+.nav-list .show{
+    display: block;
+}
+#checkbox:checked ~ .nav-list ul {
+    opacity: 1;
+    visibility: visible; 
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+#checkbox:checked ~ .nav-list .show {
+    display:none ;
+}
+#checkbox:checked ~ .nav-list .hide {
+    display:block ;
+}
+
+
+.intro{
+    font-size: 2rem;
+}
+.home-img img{
+    width: 17rem;
+}
+.about-img img{
+    display: none;
+}
+
+.heading{
+    text-align: center;
+}
+#about{
+    display: block;
+    padding: 2rem 7rem;
+}
+.about-content{
+    width: 100%;
+}
+.about-desc{
+    margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 950px) {
+    #about, #contact{
+        padding: 2rem;
+    }
+    .btn{
+        padding: .5rem 1rem;
+        font-size: 1rem;
+    }
+
+}
